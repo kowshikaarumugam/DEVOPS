@@ -1,6 +1,6 @@
 name: KOWSHIKA
 
-on: push
+on: workflow_dispatch
 
 jobs:
   my-test-job:
