@@ -1,20 +1,18 @@
-name: KOWSHIKA
+name: kowshika
 
-on: workflow_dispatch
+on: push
 
 jobs:
   my-test-job:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Print CI Pipeline Running
-        run: echo "CI Pipeline Running"
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v4
+      - name: Setup Python
+        uses: actions/setup-python@v6
         with:
           python-version: '3.13'
 
-      - name: Run Python Script
-        run: python my_script.py
+      - name: Run message
+        run: echo "Python installed successfully"
