@@ -1,0 +1,11 @@
+name: KOWSHIKA
+
+on: push
+
+jobs:
+  my-test-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print CI Pipeline Running
+        run: echo "CI Pipeline Running"
